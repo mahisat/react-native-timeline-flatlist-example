@@ -21,12 +21,12 @@ const dummyData = [
     time: '11.30 AM',
   },
   {
-    name: 'Kumar',
-    age: 23,
+    name: 'Krishna',
+    age: 40,
     time: '12.00 PM',
   },
   {
-    name: 'Krishna',
+    name: 'Kumar',
     age: 25,
     time: '12.30 PM',
   },
@@ -42,7 +42,7 @@ const App = () => {
           valueOne={name}
           labelTwo={'Age'}
           valueTwo={age}
-          labelThree={'Appointment Time'}
+          labelThree={'Time'}
           valueThree={time}
         />
       ),
@@ -53,8 +53,10 @@ const App = () => {
     <SafeAreaView style={{flex: 1}}>
       <StatusBar backgroundColor={'blue'} />
       <View style={{flex: 1, backgroundColor: 'blue'}}>
-        <ScrollView style={{marginHorizontal: 15}}>
-          <Text style={style.title}>Appointments List</Text>
+        <ScrollView
+          style={{marginHorizontal: 15}}
+          showsVerticalScrollIndicator={false}>
+          <Text style={style.title}>Appointment List</Text>
           <MyTimeline data={Data} />
         </ScrollView>
       </View>

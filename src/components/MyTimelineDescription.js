@@ -11,7 +11,7 @@ const MyTimelineDescription = props => {
   } = props;
   return (
     <View style={styles.container}>
-      {labelOne && (
+      {Boolean(valueOne) && (
         <View style={{flex: 1, flexDirection: 'row'}}>
           <View style={{flex: 0.5}}>
             <Text style={styles.labelStyle}>{labelOne}</Text>
@@ -22,8 +22,8 @@ const MyTimelineDescription = props => {
         </View>
       )}
 
-      {labelTwo && (
-        <View style={{flex: 1, flexDirection: 'row'}}>
+      {Boolean(valueTwo) && (
+        <View style={{flex: 1, flexDirection: 'row', marginVertical: 10}}>
           <View style={{flex: 0.5}}>
             <Text style={styles.labelStyle}>{labelTwo}</Text>
           </View>
@@ -32,7 +32,7 @@ const MyTimelineDescription = props => {
           </View>
         </View>
       )}
-      {labelThree && (
+      {Boolean(valueThree) && (
         <View style={{flex: 1, flexDirection: 'row'}}>
           <View style={{flex: 0.5}}>
             <Text style={styles.labelStyle}>{labelThree}</Text>
